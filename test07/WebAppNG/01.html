@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../packages/angularjs.1.2.1/content/Scripts/angular.js"></script>
+<script type="text/javascript">
+    function myController($scope,$timeout) {
+        var updateClock=function() {
+            $scope.clock = new Date();
+            $timeout(function () {
+                updateClock();
+
+            },1000)
+        };
+updateClock();
+    }
+</script>
+</head>
+<body>
+<div ng-controller="myController">
+<input type="text" name="" id="" ng-model="name" placeholder="your name"/>
+{{name}}
+{{clock}}
+</div>
+</body>
+
+</html>

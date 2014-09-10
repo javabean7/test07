@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="TemplateLinkImageApp">
+<head>
+    <title> </title>
+     <script src="Scripts/angular.js"></script>
+     <script src="js/templatelinkimagecontrollers.js"></script>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+   
+</head>
+<body ng-controller="PhoneListCtrl">     
+     
+    <ul class="phones">
+           <li ng-repeat="phone in phones"  class="thumbnail>
+             <a href="#/phones/{{phone.id}}" class="thumb">
+                 <img ng-src="{{phone.imageUrl}}">
+
+             </a>
+             <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+             <p>{{phone.snippet}}</p>
+           </li>
+         </ul>
+  
+</body>
+</html>
